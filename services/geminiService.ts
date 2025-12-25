@@ -9,10 +9,10 @@ export const generateGreeting = async (style: GreetingStyle): Promise<GreetingDa
   // Fallback for standard to save tokens and be instant
   if (style === GreetingStyle.STANDARD) {
     return {
-      text: "Hello, World!",
+      text: "Hello World!",
       language: "English",
       description: "The classic greeting that started it all.",
-      codeSnippet: 'console.log("Hello, World!");'
+      codeSnippet: 'console.log("Hello World!");'
     };
   }
 
@@ -21,7 +21,7 @@ export const generateGreeting = async (style: GreetingStyle): Promise<GreetingDa
   const prompt = `Generate a 'Hello World' greeting in the style of: ${style}. 
   If the style involves a specific programming language (like 'Code'), choose a popular one other than simple console.log if possible, or make it creative.
   If the style is 'Alien', make it sound sci-fi.
-  If the style is 'Norwegian', translate it.
+  If the style is 'Norwegian', translate it to 'Hei Verden!' or something culturally witty.
   
   Return a JSON object.`;
 
